@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <div id="matrix-background"></div>
+    <div class="dashboard">
+        <h1 class="dashboard-title">Hacker Productivity Dashboard</h1>
+        <div class="left-section">
+            <form id="add-task-form">
+                <input type="text" id="task-name" placeholder="Task Name" required>
+                <input type="date" id="due-date" required>
+                <button type="submit" id="add-task-button">Add Task</button>
+            </form>
+            <button id="clear-tasks">
+                <span class="hacker-symbol">☠</span> Clear All Tasks
+            </button>
+        </div>
+        <div class="right-section">
+            <h2>Tasks To Do</h2>
+            <div class="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+            <div id="task-list"></div>
+        </div>
+        <div id="clock" class="clock"></div>
+        <div id="calendar" class="calendar"></div>
+    </div>
+    <script src="./assets/js/scripts.js"></script>
+</body>
+</html>

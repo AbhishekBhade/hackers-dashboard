@@ -1,0 +1,219 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Share Tech Mono', monospace;
+    background: black;
+    color: #00ff00;
+    overflow: hidden;
+    font-size: 18px; /* Increase base font size */
+}
+
+/* Title styling */
+.dashboard-title {
+    text-align: center;
+    font-size: 32px; /* Increase title size */
+    color: #00ff00;
+    font-family: 'Share Tech Mono', monospace;
+    background: #111;
+    padding: 15px;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    margin: 20px auto; /* Center the title */
+    width: fit-content; /* Ensure the title doesn't stretch unnecessarily */
+    z-index: 1; /* Ensure it is above the background */
+}
+
+/* Left section styling */
+.left-section {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Add spacing between elements */
+    z-index: 1;
+}
+
+form {
+    display: flex;
+    gap: 10px; /* Add spacing between inputs */
+}
+
+form input[type="text"],
+form input[type="date"] {
+    flex: 1;
+    padding: 12px;
+    background: #111;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    border-radius: 5px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 16px;
+}
+
+form button {
+    padding: 12px 25px;
+    background: #00ff00;
+    color: #111;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+form button:hover {
+    background: #111;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+}
+
+#clear-tasks {
+    padding: 12px 25px;
+    background: #111;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+#clear-tasks:hover {
+    background: #00ff00;
+    color: #111;
+}
+
+/* Right section styling */
+.right-section {
+    position: fixed;
+    top: 120px;
+    right: 20px;
+    width: 300px;
+    background: #111;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    padding: 15px;
+    z-index: 1;
+}
+
+.right-section h2 {
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    text-align: center;
+    color: #00ff00;
+    border-bottom: 1px solid #00ff00;
+    padding-bottom: 10px;
+}
+
+.progress-bar-container {
+    background: #333;
+    border: 1px solid #00ff00;
+    height: 20px;
+    margin-bottom: 15px; /* Add spacing below the progress bar */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    background: #00ff00;
+    width: 0; /* Initial width is 0 */
+    transition: width 0.3s ease; /* Smooth transition for progress updates */
+}
+
+#task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #222;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #00ff00;
+}
+
+.task-item .completed {
+    text-decoration: line-through;
+    color: #555;
+}
+
+/* Clock styling */
+.clock {
+    position: fixed; /* Ensure it stays in the top-left corner */
+    top: 120px;
+    left: 20px;
+    font-size: 28px; /* Increase clock size */
+    color: #00ff00;
+    font-family: 'Share Tech Mono', monospace;
+    background: #111;
+    padding: 15px;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    z-index: 2; /* Ensure it is above other elements */
+}
+
+/* Matrix background styling */
+#matrix-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it is behind all other elements */
+    pointer-events: none; /* Prevent it from blocking interactions */
+    background: black; /* Fallback background color */
+}
+
+/* Calendar styling */
+.calendar {
+    position: fixed;
+    top: 220px; /* Position it below the clock */
+    left: 20px;
+    background: #111;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    padding: 15px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 16px;
+    z-index: 2; /* Ensure it is above the background */
+    width: 250px; /* Set a fixed width for the calendar */
+}
+
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar th,
+.calendar td {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #00ff00;
+}
+
+.calendar th {
+    background: #222;
+    color: #00ff00;
+}
+
+.calendar td {
+    background: #111;
+    color: #00ff00;
+}
+
+.calendar .today {
+    background: #00ff00;
+    color: #111;
+    font-weight: bold;
+}
